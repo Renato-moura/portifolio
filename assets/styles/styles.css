@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #cfcfd1;
+    /*background-image: url('bg.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a área */*/
+}
+body {
+    margin: 0 auto;
+    max-width: 1200px; /* Limita a largura da página */
+    padding: 20px; /* Espaçamento ao redor do conteúdo */
+    background-color: #f9f9f9; /* Adiciona um fundo claro */
+    font-family: Arial, sans-serif;
+}
+
+section {
+    border: 1px solid #ddd; /* Apenas para visualização */
+    padding: 15px;
+    margin-bottom: 20px; /* Espaço entre as seções */
+}
+
+/* Cabeçalho */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff6347; /* Laranja */
+}
+
+/* Menu Responsivo */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+section p,
+section ul {
+    font-size: 18px;
+    color: #555;
+}
+
+section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.projeto {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projeto h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.projeto a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 18px;
+}
+
+form input,
+form textarea,
+form button {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e5533d;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+    width: 100%
+}
+
+/* Dynamic Text */
+#dynamic-text {
+    font-size: 1.2rem;
+    color: #00c0ff;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#skills{
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Centralizar o título e o carrossel */
+#formacao {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#formacao h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Estilo do Carrossel */
+.carousel {
+    display: flex;
+    overflow: hidden; /* Garante que os itens não saiam da área visível */
+       width: 100%;
+    gap: 20px;
+}
+
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Fade-in ao exibir o item */
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+@keyframes slide {
+    0%, 33% { transform: translateX(0); }
+    34%, 66% { transform: translateX(-100%); }
+    67%, 100% { transform: translateX(-200%); }
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.skill-img {
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 2s forwards; /* Aparecimento gradual */
+}
+
+/* Definir a animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa com opacidade 0 (invisível) */
+    }
+    to {
+        opacity: 1; /* Termina com opacidade 1 (totalmente visível) */
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfólio de Renato Moura - Desenvolvedor Full Stack">
+    <title>Renato Moura - Portfólio</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ícones -->
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="#home">
+                <img src="assets/img/logo.png" alt="Logo" width="75" height="75">
+                <h1>Renato Moura</h1>
+                <span id="dynamic-text"></span>
+            </a>
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <span class="icon-bars">☰</span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#formacao">Formações</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Seção Sobre Mim -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou Renato Moura, desenvolvedor Full Stack com experiência em tecnologias como HTML, CSS, JavaScript e frameworks como React e Node.js. Meu objetivo é criar soluções tecnológicas que impactem positivamente as pessoas e empresas.</p>
+        </section>
+
+        <!-- Seção Skills -->
+        <section id="skills">
+            <h2>Minhas Skills</h2>
+            <div class="skills-container">
+                <ul>
+                    <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
+                    <li><i class="fab fa-react"></i> Frameworks: React, Angular, Vue</li>
+                    <li><i class="fas fa-server"></i> Back-End: Node.js, Java Spring</li>
+                    <li><i class="fas fa-database"></i> Banco de Dados: MySQL, MongoDB</li>
+                    <li><i class="fas fa-shield-alt"></i> Segurança da Informação</li>
+                </ul>
+                <img class="skill-img" src="assets/img/skills-image.png" alt="Imagem ilustrativa de skills" width="60%">
+            </div>
+        </section>
+
+        <!-- Seção Formações -->
+        <section id="formacao">
+    <h2>Formações Escolares</h2>
+    <div class="carousel">
+        <div class="carousel-item">
+            <h3>Analise e Desenvolvimento de Sistemas</h3>
+            <img src="assets/img/ads.jpg" alt="Imagem do Projeto 1" width="300" height="200">
+	    <p>Fatec Ipiranga (2021)</p>   
+        </div>
+
+        <div class="carousel-item">
+            <h3>Curso de Java Spring REST</h3>
+            <img src="assets/img/dio.jpg" alt="Imagem do Projeto 1" width="300" height="200">
+            <p>Digital Innovation One - Dio</p>
+         </div>
+
+          <div class="carousel-item">
+            <h3>Oracle ONE - Br G7</h3>
+	    <img src="assets/img/oracle.jpg" alt="Imagem do Projeto 1" width="300" height="200">
+            <p>Alura - Oracle</p>
+           </div>
+         </div>
+        </section>
+
+        <!-- Seção Projetos -->
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projeto">
+                <h3>Projeto 1: Desenvolvimento de Website</h3>
+                <img src="assets/img/bg.png" alt="Imagem do Projeto 1" width="300" height="200">
+                <p>Descrição do projeto 1. <a href="#">Ver mais</a></p>
+            </div>
+            <div class="projeto">
+                <h3>Projeto 2: Sistema de E-commerce</h3>
+                <img src="assets/img/bg.png" alt="Imagem do Projeto 2" width="300" height="200">
+                <p>Descrição do projeto 2. <a href="#">Ver mais</a></p>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Renato Moura - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/script/script.js"></script>
+</body>
+</html>
