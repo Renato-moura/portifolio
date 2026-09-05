@@ -1,0 +1,577 @@
+/* =========================================
+   CALCULADORA DE INVESTIMENTO
+========================================= */
+
+.calculator-section {
+
+    padding: 140px 7%;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #151a12,
+            #0a0a0a 55%
+        );
+
+}
+
+
+.calculator-intro {
+
+    max-width: 750px;
+
+    margin-bottom: 70px;
+
+}
+
+
+.calculator-intro small {
+
+    color: #e8ff3f;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+}
+
+
+.calculator-intro h2 {
+
+    margin-top: 20px;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: .95;
+
+    letter-spacing: -4px;
+
+}
+
+
+.calculator-intro h2 span {
+
+    color: #e8ff3f;
+
+}
+
+
+.calculator-intro p {
+
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    color: #777;
+
+    line-height: 1.7;
+
+}
+
+
+/* CONTAINER */
+
+.calculator {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: #111311;
+
+    border: 1px solid #292d29;
+
+    border-radius: 15px;
+
+}
+
+
+/* PROGRESSO */
+
+.calculator-progress {
+
+    margin-bottom: 50px;
+
+}
+
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #292d29;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+#progressBar {
+
+    width: 20%;
+
+    height: 100%;
+
+    background: #e8ff3f;
+
+    transition: .4s;
+
+}
+
+
+/* ETAPAS */
+
+.calculator-step {
+
+    display: none;
+
+}
+
+
+.calculator-step.active {
+
+    display: block;
+
+    animation: calculatorFade .4s ease;
+
+}
+
+
+@keyframes calculatorFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.step-number {
+
+    color: #555;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.calculator-step h3 {
+
+    margin-top: 15px;
+
+    font-size: 30px;
+
+}
+
+
+.calculator-step > p {
+
+    margin-top: 10px;
+
+    color: #777;
+
+}
+
+
+/* OPÇÕES */
+
+.options-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+
+.option {
+
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+
+}
+
+
+.option input {
+
+    position: absolute;
+
+    opacity: 0;
+
+}
+
+
+.option-content {
+
+    min-height: 130px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #171a17;
+
+    border: 1px solid #292d29;
+
+    border-radius: 8px;
+
+    transition: .25s;
+
+}
+
+
+.option:hover .option-content {
+
+    border-color: #596047;
+
+}
+
+
+.option input:checked + .option-content {
+
+    border-color: #e8ff3f;
+
+    background: #1b1e18;
+
+    box-shadow:
+        0 0 0 1px #e8ff3f;
+
+}
+
+
+.option-icon {
+
+    color: #e8ff3f;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.option-content strong {
+
+    font-size: 16px;
+
+}
+
+
+.option-content small {
+
+    color: #777;
+
+    margin-top: 8px;
+
+    line-height: 1.5;
+
+}
+
+
+.options-vertical {
+
+    display: grid;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+
+.options-vertical .option-content {
+
+    min-height: 100px;
+
+}
+
+
+.option-price {
+
+    margin-top: 10px;
+
+    color: #e8ff3f;
+
+    font-size: 12px;
+
+}
+
+
+/* FUNCIONALIDADES */
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.feature-option {
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    background: #171a17;
+
+    border: 1px solid #292d29;
+
+    border-radius: 8px;
+
+}
+
+
+.feature-option:hover {
+
+    border-color: #596047;
+
+}
+
+
+.feature-option input {
+
+    width: 18px;
+
+    height: 18px;
+
+    accent-color: #e8ff3f;
+
+}
+
+
+.feature-option span {
+
+    flex: 1;
+
+    font-size: 14px;
+
+}
+
+
+.feature-option small {
+
+    color: #e8ff3f;
+
+    font-size: 11px;
+
+}
+
+
+/* RESULTADO */
+
+.calculator-result {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+}
+
+
+.calculator-result.show {
+
+    display: block;
+
+    animation: calculatorFade .5s ease;
+
+}
+
+
+.calculator-result > span {
+
+    color: #e8ff3f;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+}
+
+
+.calculator-result h3 {
+
+    margin-top: 20px;
+
+    font-size: 65px;
+
+    letter-spacing: -3px;
+
+}
+
+
+.calculator-result h3 strong {
+
+    color: #e8ff3f;
+
+}
+
+
+.calculator-result p {
+
+    max-width: 600px;
+
+    margin: 20px auto 30px;
+
+    color: #777;
+
+    line-height: 1.6;
+
+}
+
+
+.result-details {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    text-align: left;
+
+    background: #171a17;
+
+    border: 1px solid #292d29;
+
+    border-radius: 8px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+}
+
+
+/* NAVEGAÇÃO */
+
+.calculator-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #292d29;
+
+}
+
+
+.calculator-back {
+
+    border: 0;
+
+    background: transparent;
+
+    color: #777;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+}
+
+
+.calculator-back:hover {
+
+    color: white;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    .calculator-section {
+
+        padding: 100px 6%;
+
+    }
+
+    .calculator {
+
+        padding: 25px 18px;
+
+    }
+
+    .options-grid,
+    .features-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .calculator-result h3 {
+
+        font-size: 45px;
+
+    }
+
+}
